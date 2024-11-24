@@ -4,6 +4,7 @@ import { createTheme } from "@mui/system";
 import { useEffect, useState } from "react";
 import { DrawerProvider } from "../drawer/drawerContext";
 import { Nav } from "./nav";
+import { usePathname } from "next/navigation";
 
 declare module '@mui/system' {
   interface BreakpointOverrides {
@@ -48,6 +49,12 @@ export const NavWrapper = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  const activePath = usePathname()
+
+  if (activePath === '/') {
+    return null
+  }
 
   return <>
     <DrawerProvider>

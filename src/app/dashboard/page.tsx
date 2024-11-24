@@ -1,9 +1,7 @@
 import React from 'react';
 
-import MdxComponent from '../../mdx/01-learn.mdx';
-
 const Page: React.FC = () => {
-  return <MdxComponent />
+  return <div>dashboard</div>
 };
 
 export default Page

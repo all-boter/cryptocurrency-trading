@@ -7,7 +7,6 @@ import { sidebar } from '@/common/router'
 export const Sidebar = ({ isMobile = false }: { isMobile?: boolean }) => {
   const activePath = usePathname()
 
-  console.log('%c=activePath', 'color:red', activePath)
   if (activePath === '/') {
     return null
   }
