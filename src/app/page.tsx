@@ -1,59 +1,49 @@
-import { Box } from "@mui/system";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
-  return <main className={styles.main}>
-    <Box>
-      <Box component={'nav'} className='y-center' sx={{ height: '68px', justifyContent: 'space-between', color: '#FFF' }}>
-        <Box sx={{ ml: '20px' }}>
-          {/* <Logo /> */}
-          <img src='/logo2.svg' alt='log' />
-        </Box>
-        <Box sx={{ mr: '20px' }}>
-          {/* <I18n /> */}
-          I18n
-        </Box>
-      </Box>
+  return (
+    <main className={styles.main}>
+      <div>
+        {/* Navbar */}
+        <nav className="flex items-center justify-between h-[68px] text-white">
+          <div className="ml-5">
+            {/* <Logo /> */}
+            <img className="h-10" src="/logo2.svg" alt="logo" />
+          </div>
+          <div className="mr-5">
+            {/* <I18n /> */}
+            I18n
+          </div>
+        </nav>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '70vh' }}>
-        <Box sx={{
-          fontSize: {
-            mobile: '48px',
-            desktop: '100px'
-          },
-          mt: '40px',
-          backgroundImage: 'linear-gradient(to right, #22c55e, #3b82f6)',
-          color: 'transparent',
-          backgroundClip: 'text',
-          fontWeight: 900
-        }}>
-          {/* {t('slogan1')} */}
-          slogan1
-        </Box>
-        <Box sx={{
-          fontSize: {
-            mobile: '48px',
-            desktop: '100px'
-          },
-          mb: '40px',
-          backgroundImage: 'linear-gradient(to right, #3b82f6, #a855f7)',
-          color: 'transparent',
-          backgroundClip: 'text',
-          fontWeight: 900
-        }}>
-          {/* {t('slogan2')} */}
-          slogan2
-        </Box>
+        {/* Main content */}
+        <div className="flex flex-col items-center min-h-[70vh]">
+          {/* Slogan 1 */}
+          <div className="mt-10 text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500 font-extrabold text-[48px] sm:text-[100px]">
+            {/* {t('slogan1')} */}
+            slogan1
+          </div>
 
-        <Box sx={{ width: '70%', textAlign: 'center', fontSize: '22px', color: '#d1d5db' }}>
-          {/* {t('slogan3')} */}
-          slogan3
-        </Box>
-        <Box sx={{ display: 'flex', mt: '60px' }}>
-          {/* <HomeBtns /> */}
-          HomeBtns
-        </Box>
-      </Box>
-    </Box>
-  </main>
+          {/* Slogan 2 */}
+          <div className="mb-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 font-extrabold text-[48px] sm:text-[100px]">
+            {/* {t('slogan2')} */}
+            slogan2
+          </div>
+
+          {/* Slogan 3 */}
+          <div className="w-4/5 text-center text-gray-300 text-lg sm:text-xl">
+            {/* {t('slogan3')} */}
+            slogan3
+          </div>
+
+          {/* Buttons */}
+          <div className="flex mt-16">
+            {/* <HomeBtns /> */}
+            HomeBtns
+          </div>
+        </div>
+      </div>
+    </main>
+  );
 }
