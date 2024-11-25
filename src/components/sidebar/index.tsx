@@ -7,9 +7,9 @@ import { sidebar } from '@/common/router'
 export const Sidebar = ({ isMobile = false }: { isMobile?: boolean }) => {
   const activePath = usePathname()
 
-  if (activePath === '/') {
-    return null
-  }
+  // if (activePath === '/') {
+  //   return null
+  // }
 
   return (
     <div className='sidebar-container'>

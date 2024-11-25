@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "首页",
+    "about": "关于"
+  },
+  "common": {
+    "welcome": "欢迎"
+  },
+  "metadata": {
+    "title": "我的网站",
+    "description": "欢迎访问我的网站"
+  }
+} 

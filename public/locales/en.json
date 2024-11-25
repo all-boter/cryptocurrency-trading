@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About"
+  },
+  "common": {
+    "welcome": "Welcome"
+  },
+  "metadata": {
+    "title": "My Website",
+    "description": "Welcome to my website"
+  }
+} 
