@@ -6,7 +6,10 @@ if (process.env.NODE_ENV === 'development') {
 
 /** @type {import('next').NextConfig} */
 const config = {
-  // Remove i18n config, as it is used differently in App Router
+  experimental: {
+    // 默认使用 edge runtime
+    runtime: 'edge',
+  },
 }
 
 export default config;
