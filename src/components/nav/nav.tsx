@@ -7,6 +7,7 @@ import { Drawer } from "../drawer";
 import { DocSidebarDesktop } from "../sidebar/desktop";
 import { sidebar } from "@/common/router";
 import { usePathname } from "next/navigation";
+import LanguageSwitcher from '@/components/language-switcher'
 
 export const Nav = ({ isMobile }: { isMobile: boolean }) => {
   const { toggleDrawer } = useDrawerContext();
@@ -44,23 +45,28 @@ export const Nav = ({ isMobile }: { isMobile: boolean }) => {
             src="/logo.svg"
             width={36}
             sx={{
-              ml: isMobile?"0px":"10px",
+              ml: isMobile ? "0px" : "10px",
               borderRadius: "20%",
             }}
           />
         </div>
 
-        <Box
-          component={"img"}
-          alt="icon"
-          src="/github.svg"
-          width={30}
-          onClick={() => onGithub()}
-          sx={{
-            mr: "10px",
-            borderRadius: "50%",
-          }}
-        />
+        <div className="flex h-full items-center">
+          <LanguageSwitcher />
+
+          <Box
+            className="ml-2"
+            component={"img"}
+            alt="icon"
+            src="/github.svg"
+            width={30}
+            onClick={() => onGithub()}
+            sx={{
+              mr: "10px",
+              borderRadius: "50%",
+            }}
+          />
+        </div>
       </Box>
 
       <Drawer anchor={"left"} id="NavDrawer" width={220}>

@@ -1,5 +1,4 @@
 import { getDictionary } from '@/config/i18n'
-import LanguageSwitcher from '@/components/language-switcher'
 
 export const runtime = 'edge'
 
@@ -8,7 +7,6 @@ export default async function Home({ params: { locale } }: { params: { locale: s
   
   return (
     <div className="w-full h-full pt-[50px]">
-      <LanguageSwitcher />
       <h1 className="text-2xl font-bold">{dict.common.welcome}</h1>
       <nav>
         <ul className="list-disc">
