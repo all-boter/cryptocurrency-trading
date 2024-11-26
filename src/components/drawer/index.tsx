@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import clsx from "clsx";
-import { Box } from "@mui/system"
 import { useDrawerContext } from './drawerContext';
 import './index.css'
 
@@ -57,15 +56,12 @@ export const Drawer = ({ onClose, anchor, id, children, width }: IDrawer) => {
   return (
     <div className={clsx(renderAnchor(anchor), 'drawer', active && 'active')}>
       <div className={'drawer-mask'} onClick={onCloseDrawer} />
-      <Box sx={{
-        position: 'relative',
-        width: width ? `${width}px` : '340px',
-        height: '100%',
-        // backgroundColor: '#1f2937',
-        borderRight: '1px solid #151e22'
-      }}>
+      <div 
+        className="relative h-full border-r border-[#151e22]"
+        style={{ width: width ? `${width}px` : '340px' }}
+      >
         {children}
-      </Box>
+      </div>
     </div>
   );
 }

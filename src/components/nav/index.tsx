@@ -1,48 +1,29 @@
 'use client';
 
-import { createTheme } from "@mui/system";
 import { useEffect, useState } from "react";
 import { DrawerProvider } from "../drawer/drawerContext";
 import { Nav } from "./nav";
 import { usePathname } from "next/navigation";
 
-declare module '@mui/system' {
-  interface BreakpointOverrides {
-    xs: false;
-    sm: false;
-    md: true;
-    lg: false;
-    xl: true;
-    mobile: true;
-    tablet: true;
-    desktop: true;
-  }
-}
-
-const theme = createTheme({
-  breakpoints: {
-    values: {
-      mobile: 0,
-      tablet: 768,
-      md: 900,
-      desktop: 1200,
-      xl: 1500
-    },
-  },
-});
+const BREAKPOINTS = {
+  mobile: 0,
+  tablet: 768,
+  md: 900,
+  desktop: 1200,
+  xl: 1500
+} as const;
 
 export const NavWrapper = () => {
   const [isMobileResize, setIsMobileResize] = useState<0 | 1 | 2>(0);
-
-  const isMobile = isMobileResize === 1 ? true : false
+  const isMobile = isMobileResize === 1;
+  const activePath = usePathname();
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileResize(window.innerWidth < theme.breakpoints.values.tablet ? 1 : 2);
+      setIsMobileResize(window.innerWidth < BREAKPOINTS.tablet ? 1 : 2);
     };
 
     handleResize();
-
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -50,15 +31,13 @@ export const NavWrapper = () => {
     };
   }, []);
 
-  const activePath = usePathname()
-
   if (activePath === '/') {
-    return null
+    return null;
   }
 
-  return <>
+  return (
     <DrawerProvider>
       <Nav isMobile={isMobile} />
     </DrawerProvider>
-  </>
+  );
 }

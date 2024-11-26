@@ -21,7 +21,6 @@ export default function LocaleLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.svg" />
       </head>
-      {/* <body className="min-h-screen"> */}
       <body className="w-full h-full">
         <main className="w-full h-full">
           <NavWrapper />

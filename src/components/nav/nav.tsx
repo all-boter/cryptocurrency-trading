@@ -1,6 +1,5 @@
 "use client";
 
-import { Box } from "@mui/system";
 import { Menu } from "lucide-react";
 import { useDrawerContext } from "../drawer/drawerContext";
 import { Drawer } from "../drawer";
@@ -19,55 +18,37 @@ export const Nav = ({ isMobile }: { isMobile: boolean }) => {
 
   return (
     <nav className="nav">
-      <Box sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        height: "100%",
-      }}>
+      <div className="flex items-center justify-between h-full">
         <div className="flex">
           {isMobile && (
-            <Box
+            <Menu
               onClick={() => toggleDrawer("NavDrawer")}
-              component={Menu}
               size={22}
-              color={"#000"}
-              sx={{
-                cursor: "pointer",
-                mr: "10px",
-              }}
+              color="#000"
+              className="cursor-pointer mr-[10px]"
             />
           )}
 
-          <Box
-            component={"img"}
+          <img
             alt="icon"
             src="/logo.svg"
             width={36}
-            sx={{
-              ml: isMobile ? "0px" : "10px",
-              borderRadius: "20%",
-            }}
+            className={`${isMobile ? '' : 'ml-[10px]'} rounded-[20%]`}
           />
         </div>
 
         <div className="flex h-full items-center">
           <LanguageSwitcher />
 
-          <Box
-            className="ml-2"
-            component={"img"}
+          <img
+            className="ml-2 mr-[10px] rounded-[50%]"
             alt="icon"
             src="/github.svg"
             width={30}
             onClick={() => onGithub()}
-            sx={{
-              mr: "10px",
-              borderRadius: "50%",
-            }}
           />
         </div>
-      </Box>
+      </div>
 
       <Drawer anchor={"left"} id="NavDrawer" width={220}>
         {isMobile && <div className="sidebarMobile-container">
