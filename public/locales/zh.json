@@ -1,4 +1,15 @@
 {
+  "slogan1": "发现 / 构建",
+  "slogan2": "高效的机器人",
+  "slogan3": "Boter 是一个机器人即服务平台，您可以发现一些有用的机器人，或者用我们的工具构建自己的机器人",
+  "edit": "编辑",
+  "del": "删除",
+  "save": "保存",
+  "cancel": "取消",
+  "confirm": "确定",
+  "logout": "退出登录",
+  "loginWGitHub": "使用 GitHub 登录",
+  "loginWGoogle": "使用 Google 登录",
   "navigation": {
     "home": "首页",
     "about": "关于"

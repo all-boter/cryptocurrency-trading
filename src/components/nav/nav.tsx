@@ -17,7 +17,7 @@ export const Nav = ({ isMobile }: { isMobile: boolean }) => {
   }
 
   return (
-    <nav className="nav">
+    <nav className="nav md:px-6">
       <div className="flex items-center justify-between h-full">
         <div className="flex">
           {isMobile && (
@@ -29,12 +29,17 @@ export const Nav = ({ isMobile }: { isMobile: boolean }) => {
             />
           )}
 
-          <img
-            alt="icon"
-            src="/logo.svg"
-            width={36}
-            className={`${isMobile ? '' : 'ml-[10px]'} rounded-[20%]`}
-          />
+          <div className='flex items-center'>
+            <img
+              alt="icon"
+              src="/logo.svg"
+              width={36}
+              className={`${isMobile ? '' : 'ml-[10px]'} rounded-[20%] mr-2`}
+            />
+            <span className="text-lg">
+              Boter
+            </span>
+          </div>
         </div>
 
         <div className="flex h-full items-center">

@@ -1,4 +1,15 @@
 {
+  "slogan1": "Discover / build",
+  "slogan2": "Efficient robots",
+  "slogan3": "Boter is a Bot as a service platform, Your can discover some useful bot, or build your own bot with our tools",
+  "edit": "Edit",
+  "del": "Delete",
+  "save": "Save",
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "logout": "Logout",
+  "loginWGitHub": "Login with GitHub",
+  "loginWGoogle": "Login with Google",
   "navigation": {
     "home": "Home",
     "about": "About"
