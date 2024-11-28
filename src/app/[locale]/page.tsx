@@ -1,3 +1,4 @@
+import { HomeBtns } from '@/components/views/homeBtns'
 import { getDictionary } from '@/config/i18n'
 
 export const runtime = 'edge'
@@ -22,7 +23,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
           </div>
 
           <div className="flex mt-16">
-            HomeBtns
+            <HomeBtns />
           </div>
         </div>
       </div>
