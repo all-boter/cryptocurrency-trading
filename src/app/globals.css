@@ -165,7 +165,6 @@ ol li::marker {
   position: fixed;
   top: 0;
   height: 50px;
-  background: #e4e8ec;
   z-index: 88899;
   width: 100%;
 }

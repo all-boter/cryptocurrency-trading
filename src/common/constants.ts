@@ -3,7 +3,7 @@ export const SUCCESS = 1
 export const FAIL = 0
 
 export const THIRD_PARTY_LOGIN_TAG = 't'
-
+/*
 export function getCurrentDomain(): string {
   const url = window.location.href;
 
@@ -11,8 +11,9 @@ export function getCurrentDomain(): string {
 }
 
 const currentDomain = getCurrentDomain()
+*/
 
-export const webRedirect = `${currentDomain}/dashbord/strategies`
+// export const webRedirect = `${currentDomain}/dashbord/strategies`
 
 export const bundlerUrl = process.env.NEXT_PUBLIC_BUNDLER_URL
 
