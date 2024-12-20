@@ -7,7 +7,6 @@ export const runtime = 'edge';
 
 const Page: React.FC = () => {
   return <div className="w-full h-full pt-[50px]">
-    dashboard test
     <Dashboard />
   </div>
 };

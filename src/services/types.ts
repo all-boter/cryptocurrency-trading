@@ -65,6 +65,9 @@ export interface Candle {
   currentQuoteVolume: number
   percentage: string
 
+  gain: number
+  amplitude: number
+
   period: Period; // The time period for the candle (e.g., 1 minute, 5 minutes, etc.)
   /**
    * The timestamp when the candle opened (in milliseconds since epoch).

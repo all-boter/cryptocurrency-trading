@@ -25,12 +25,6 @@ body {
   height: 100%;
   width: 100%;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
@@ -215,7 +209,7 @@ ol li::marker {
   height: 100px;
 }
 
-.md-container {
+.children-container {
   display: flex;
   width: 100%;
   margin: 0 auto;

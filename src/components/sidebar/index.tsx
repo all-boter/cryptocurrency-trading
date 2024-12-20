@@ -7,12 +7,12 @@ import { sidebar } from '@/common/router'
 export const Sidebar = ({ isMobile = false }: { isMobile?: boolean }) => {
   const activePath = usePathname()
 
-  // if (activePath === '/') {
-  //   return null
-  // }
+  if (activePath === '/en' || activePath === '/zh') {
+    return null
+  }
 
   return (
-    <div className='sidebar-container'>
+    <div className='sidebar-container w-[280px] h-full'>
       <div className="empty-div" />
       <aside className="sidebar-content">
         <DocSidebarDesktop activePath={activePath} sidebar={sidebar} />
