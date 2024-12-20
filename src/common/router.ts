@@ -11,11 +11,11 @@ export const sidebar: ISidebar[] = [
     href: '/dashboard',
   },
   {
-    label: 'Vocabulary',
-    href: '/vocabulary',
+    label: 'Dashboard',
+    href: '/dashboard',
     type: 'category',
     items: [
-      { href: "/vocabulary/v1", label: "v1" },
+      { href: "/dashboard", label: "v1" },
     ]
   },
 ]

@@ -4,12 +4,12 @@ class SignalsQueue {
 
   constructor(maxSize: number) {
     this.maxSize = maxSize;
-    this.loadFromSessionStorage();
+    this.loadFromStorage();
   }
 
-  // 从 sessionStorage 加载信号
-  private loadFromSessionStorage() {
-    const storedSignals = sessionStorage.getItem('tradeSignals');
+  private loadFromStorage() {
+    // sessionStorage
+    const storedSignals = localStorage.getItem('tradeSignals');
     if (storedSignals) {
       this.queue = JSON.parse(storedSignals);
     }
@@ -21,12 +21,12 @@ class SignalsQueue {
       this.queue.shift(); // 移除最旧的信号
     }
     this.queue.push(signal);
-    this.saveToSessionStorage();
+    this.saveToStorage();
   }
 
-  // 保存队列到 sessionStorage
-  private saveToSessionStorage() {
-    sessionStorage.setItem('tradeSignals', JSON.stringify(this.queue));
+  private saveToStorage() {
+    // sessionStorage
+    localStorage.setItem('tradeSignals', JSON.stringify(this.queue));
   }
 
   // 获取当前队列
@@ -35,6 +35,7 @@ class SignalsQueue {
   }
 }
 
-const signalsQueue = new SignalsQueue(100); // 最大100条信号
+// 最大100条信号
+const signalsQueue = new SignalsQueue(100);
 
 export default signalsQueue;
